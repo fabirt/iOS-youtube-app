@@ -14,8 +14,12 @@ struct SearchView: View {
     var body: some View {
         Text(text)
             .onAppear {
-                if let apiKey = Bundle.main.infoDictionary?["YouTubeApiKey"] as? String {
-                    self.text = "API KEY: \(apiKey)"
+                do {
+                    try YoutubeServiceImpl.shared.searchContent(query: "kpop") { result in
+                        print(result)
+                    }
+                } catch {
+                    print(error)
                 }
         }
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - YoutubeAPIError
-struct YoutubeAPIError: Codable {
+struct YoutubeAPIError: Codable, Error {
     let error: YoutubeAPIErrorContent
 }
 

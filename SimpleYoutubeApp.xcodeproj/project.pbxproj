@@ -18,6 +18,12 @@
 		3C1A197B26175455002BC341 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A197A26175455002BC341 /* SearchView.swift */; };
 		3C1A198026175929002BC341 /* VideoSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A197F26175929002BC341 /* VideoSnippet.swift */; };
 		3C1A198226175D6B002BC341 /* YoutubeAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A198126175D6B002BC341 /* YoutubeAPIError.swift */; };
+		3C1A1989261771AA002BC341 /* YoutubeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A1988261771AA002BC341 /* YoutubeService.swift */; };
+		3C1A198B261772EB002BC341 /* YoutubeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A198A261772EB002BC341 /* YoutubeServiceImpl.swift */; };
+		3C1A198D261773FD002BC341 /* YoutubeServiceTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A198C261773FD002BC341 /* YoutubeServiceTestImpl.swift */; };
+		3C1A1990261774A7002BC341 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A198F261774A7002BC341 /* APIConstant.swift */; };
+		3C1A1993261778A8002BC341 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A1992261778A8002BC341 /* Configuration.swift */; };
+		3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199526177B45002BC341 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		3C1A197F26175929002BC341 /* VideoSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSnippet.swift; sourceTree = "<group>"; };
 		3C1A198126175D6B002BC341 /* YoutubeAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeAPIError.swift; sourceTree = "<group>"; };
 		3C1A1984261769A1002BC341 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
+		3C1A1988261771AA002BC341 /* YoutubeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeService.swift; sourceTree = "<group>"; };
+		3C1A198A261772EB002BC341 /* YoutubeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeServiceImpl.swift; sourceTree = "<group>"; };
+		3C1A198C261773FD002BC341 /* YoutubeServiceTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeServiceTestImpl.swift; sourceTree = "<group>"; };
+		3C1A198F261774A7002BC341 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		3C1A1992261778A8002BC341 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		3C1A199526177B45002BC341 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +118,8 @@
 		3C1A19432617512C002BC341 /* SimpleYoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
-				3C1A1984261769A1002BC341 /* Config.xcconfig */,
+				3C1A199126177890002BC341 /* Application */,
+				3C1A19852617712B002BC341 /* Data */,
 				3C1A197D261758FD002BC341 /* Domain */,
 				3C1A197826175417002BC341 /* Presentation */,
 				3C1A19442617512C002BC341 /* AppDelegate.swift */,
@@ -115,6 +128,7 @@
 				3C1A19522617512F002BC341 /* LaunchScreen.storyboard */,
 				3C1A19552617512F002BC341 /* Info.plist */,
 				3C1A19482617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld */,
+				3C1A1984261769A1002BC341 /* Config.xcconfig */,
 				3C1A194F2617512F002BC341 /* Preview Content */,
 			);
 			path = SimpleYoutubeApp;
@@ -177,6 +191,58 @@
 				3C1A198126175D6B002BC341 /* YoutubeAPIError.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3C1A19852617712B002BC341 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A198626177152002BC341 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3C1A198626177152002BC341 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A199426177B27002BC341 /* Client */,
+				3C1A198E26177467002BC341 /* Constant */,
+				3C1A198726177186002BC341 /* YoutubeService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3C1A198726177186002BC341 /* YoutubeService */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A1988261771AA002BC341 /* YoutubeService.swift */,
+				3C1A198A261772EB002BC341 /* YoutubeServiceImpl.swift */,
+				3C1A198C261773FD002BC341 /* YoutubeServiceTestImpl.swift */,
+			);
+			path = YoutubeService;
+			sourceTree = "<group>";
+		};
+		3C1A198E26177467002BC341 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A198F261774A7002BC341 /* APIConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		3C1A199126177890002BC341 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A1992261778A8002BC341 /* Configuration.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3C1A199426177B27002BC341 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A199526177B45002BC341 /* NetworkClient.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +378,16 @@
 			files = (
 				3C1A197B26175455002BC341 /* SearchView.swift in Sources */,
 				3C1A198226175D6B002BC341 /* YoutubeAPIError.swift in Sources */,
+				3C1A1989261771AA002BC341 /* YoutubeService.swift in Sources */,
+				3C1A198B261772EB002BC341 /* YoutubeServiceImpl.swift in Sources */,
 				3C1A19452617512C002BC341 /* AppDelegate.swift in Sources */,
+				3C1A198D261773FD002BC341 /* YoutubeServiceTestImpl.swift in Sources */,
 				3C1A19472617512C002BC341 /* SceneDelegate.swift in Sources */,
 				3C1A198026175929002BC341 /* VideoSnippet.swift in Sources */,
+				3C1A1990261774A7002BC341 /* APIConstant.swift in Sources */,
 				3C1A194A2617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld in Sources */,
+				3C1A1993261778A8002BC341 /* Configuration.swift in Sources */,
+				3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
