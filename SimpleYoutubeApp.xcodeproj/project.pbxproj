@@ -25,6 +25,8 @@
 		3C1A1993261778A8002BC341 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A1992261778A8002BC341 /* Configuration.swift */; };
 		3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199526177B45002BC341 /* NetworkClient.swift */; };
 		3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19972617914D002BC341 /* VideoSearchResult.swift */; };
+		3C1A199C2617A5EB002BC341 /* YoutubeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */; };
+		3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		3C1A1992261778A8002BC341 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3C1A199526177B45002BC341 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3C1A19972617914D002BC341 /* VideoSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearchResult.swift; sourceTree = "<group>"; };
+		3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepository.swift; sourceTree = "<group>"; };
+		3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 		3C1A197D261758FD002BC341 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3C1A19992617A5C3002BC341 /* Repository */,
 				3C1A197E2617590D002BC341 /* Model */,
 			);
 			path = Domain;
@@ -246,6 +251,23 @@
 				3C1A199526177B45002BC341 /* NetworkClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		3C1A19992617A5C3002BC341 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A199A2617A5D2002BC341 /* YoutubeRepository */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3C1A199A2617A5D2002BC341 /* YoutubeRepository */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */,
+				3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */,
+			);
+			path = YoutubeRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,10 +410,12 @@
 				3C1A19472617512C002BC341 /* SceneDelegate.swift in Sources */,
 				3C1A198026175929002BC341 /* VideoSnippet.swift in Sources */,
 				3C1A1990261774A7002BC341 /* APIConstant.swift in Sources */,
+				3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */,
 				3C1A194A2617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld in Sources */,
 				3C1A1993261778A8002BC341 /* Configuration.swift in Sources */,
 				3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */,
 				3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */,
+				3C1A199C2617A5EB002BC341 /* YoutubeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

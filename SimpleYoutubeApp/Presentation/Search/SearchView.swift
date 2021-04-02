@@ -14,12 +14,9 @@ struct SearchView: View {
     var body: some View {
         Text(text)
             .onAppear {
-                do {
-                    try YoutubeServiceTestImpl.shared.searchContent(query: "kpop") { result in
-                        print(result)
-                    }
-                } catch {
-                    print(error)
+                let repository = YoutubeRepositoryImpl(service: YoutubeServiceTestImpl.shared)
+                repository.searchContent(query: "kpop") { result in
+                    print(result)
                 }
         }
     }
