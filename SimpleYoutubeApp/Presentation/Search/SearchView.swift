@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State var text = "Hello World!"
+    
     var body: some View {
-        Text("Hello World!")
+        Text(text)
+            .onAppear {
+                if let apiKey = Bundle.main.infoDictionary?["YouTubeApiKey"] as? String {
+                    self.text = "API KEY: \(apiKey)"
+                }
+        }
     }
 }
 
