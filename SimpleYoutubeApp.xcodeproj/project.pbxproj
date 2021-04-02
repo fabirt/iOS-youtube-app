@@ -28,6 +28,7 @@
 		3C1A199C2617A5EB002BC341 /* YoutubeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */; };
 		3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */; };
 		3C1A19A32617AF85002BC341 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19A22617AF85002BC341 /* SearchViewModel.swift */; };
+		3C1A19A52617C45D002BC341 /* VideoSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19A42617C45D002BC341 /* VideoSnippetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepository.swift; sourceTree = "<group>"; };
 		3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepositoryImpl.swift; sourceTree = "<group>"; };
 		3C1A19A22617AF85002BC341 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		3C1A19A42617C45D002BC341 /* VideoSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSnippetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				3C1A197A26175455002BC341 /* SearchView.swift */,
 				3C1A19A22617AF85002BC341 /* SearchViewModel.swift */,
+				3C1A19A42617C45D002BC341 /* VideoSnippetView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				3C1A19472617512C002BC341 /* SceneDelegate.swift in Sources */,
 				3C1A198026175929002BC341 /* VideoSnippet.swift in Sources */,
 				3C1A1990261774A7002BC341 /* APIConstant.swift in Sources */,
+				3C1A19A52617C45D002BC341 /* VideoSnippetView.swift in Sources */,
 				3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */,
 				3C1A194A2617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld in Sources */,
 				3C1A1993261778A8002BC341 /* Configuration.swift in Sources */,

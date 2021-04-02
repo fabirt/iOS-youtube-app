@@ -21,8 +21,13 @@ struct SearchView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            List(viewModel.items, id: \.etag) { (video: VideoSnippet) in
-                Text(video.etag)
+            List {
+                ForEach(viewModel.items, id: \.etag) { (video: VideoSnippet) in
+                    VideoSnippetView(video: video)
+                        .padding(.bottom)
+                        .listRowInsets(.init())
+                }
+                
             }
         }
     }
