@@ -27,6 +27,7 @@
 		3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19972617914D002BC341 /* VideoSearchResult.swift */; };
 		3C1A199C2617A5EB002BC341 /* YoutubeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */; };
 		3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */; };
+		3C1A19A32617AF85002BC341 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19A22617AF85002BC341 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		3C1A19972617914D002BC341 /* VideoSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearchResult.swift; sourceTree = "<group>"; };
 		3C1A199B2617A5EB002BC341 /* YoutubeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepository.swift; sourceTree = "<group>"; };
 		3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepositoryImpl.swift; sourceTree = "<group>"; };
+		3C1A19A22617AF85002BC341 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3C1A197A26175455002BC341 /* SearchView.swift */,
+				3C1A19A22617AF85002BC341 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				3C1A197B26175455002BC341 /* SearchView.swift in Sources */,
 				3C1A198226175D6B002BC341 /* YoutubeAPIError.swift in Sources */,
+				3C1A19A32617AF85002BC341 /* SearchViewModel.swift in Sources */,
 				3C1A1989261771AA002BC341 /* YoutubeService.swift in Sources */,
 				3C1A198B261772EB002BC341 /* YoutubeServiceImpl.swift in Sources */,
 				3C1A19452617512C002BC341 /* AppDelegate.swift in Sources */,

@@ -9,15 +9,21 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State var text = "Hello World!"
+    @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
-        Text(text)
-            .onAppear {
-                let repository = YoutubeRepositoryImpl(service: YoutubeServiceTestImpl.shared)
-                repository.searchContent(query: "kpop") { result in
-                    print(result)
-                }
+        VStack {
+            TextField(
+                "Search",
+                text: $viewModel.searchText,
+                onCommit: self.viewModel.searchContent
+            ).keyboardType(.webSearch)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            List(viewModel.items, id: \.etag) { (video: VideoSnippet) in
+                Text(video.etag)
+            }
         }
     }
 }
