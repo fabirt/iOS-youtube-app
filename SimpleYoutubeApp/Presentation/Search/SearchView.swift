@@ -24,7 +24,6 @@ struct SearchView: View {
             List {
                 ForEach(viewModel.items, id: \.etag) { (video: VideoSnippet) in
                     VideoSnippetView(video: video)
-                        .padding(.bottom)
                         .listRowInsets(.init())
                 }
                 

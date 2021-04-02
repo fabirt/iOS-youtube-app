@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199D2617A755002BC341 /* YoutubeRepositoryImpl.swift */; };
 		3C1A19A32617AF85002BC341 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19A22617AF85002BC341 /* SearchViewModel.swift */; };
 		3C1A19A52617C45D002BC341 /* VideoSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19A42617C45D002BC341 /* VideoSnippetView.swift */; };
+		3C1A19AE2617DB4D002BC341 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3C1A19AD2617DB4D002BC341 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1A19AE2617DB4D002BC341 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +294,9 @@
 			dependencies = (
 			);
 			name = SimpleYoutubeApp;
+			packageProductDependencies = (
+				3C1A19AD2617DB4D002BC341 /* SDWebImageSwiftUI */,
+			);
 			productName = SimpleYoutubeApp;
 			productReference = 3C1A19412617512C002BC341 /* Simple YT.app */;
 			productType = "com.apple.product-type.application";
@@ -364,6 +369,9 @@
 				Base,
 			);
 			mainGroup = 3C1A19382617512C002BC341;
+			packageReferences = (
+				3C1A19AC2617DB4D002BC341 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 3C1A19422617512C002BC341 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -744,6 +752,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C1A19AC2617DB4D002BC341 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C1A19AD2617DB4D002BC341 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C1A19AC2617DB4D002BC341 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3C1A19482617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld */ = {

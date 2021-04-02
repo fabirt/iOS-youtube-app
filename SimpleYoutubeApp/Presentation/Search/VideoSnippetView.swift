@@ -7,13 +7,17 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct VideoSnippetView: View {
     let video: VideoSnippet
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Color(.black)
+        VStack(alignment: .leading, spacing: 0) {
+            WebImage(url: URL(string: video.snippet.thumbnails.medium.url))
+                .resizable()
+                .placeholder(Image("ThumbnailPlaceholder"))
+                .scaledToFill()
                 .aspectRatio(320 / 180, contentMode: .fit)
             VStack(alignment: .leading, spacing: 2) {
                 Text(video.snippet.title)
@@ -24,8 +28,8 @@ struct VideoSnippetView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }.padding(.horizontal)
+                .padding(.vertical)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
