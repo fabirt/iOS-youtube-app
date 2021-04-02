@@ -8,7 +8,7 @@
 
 import Foundation
 
-class YoutubeServiceImpl : YoutubeService {
+class YoutubeServiceImpl: YoutubeService {
     /// Singleton instance.
     static let shared = YoutubeServiceImpl()
     private init() { }

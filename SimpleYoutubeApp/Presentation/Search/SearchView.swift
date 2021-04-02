@@ -15,7 +15,7 @@ struct SearchView: View {
         Text(text)
             .onAppear {
                 do {
-                    try YoutubeServiceImpl.shared.searchContent(query: "kpop") { result in
+                    try YoutubeServiceTestImpl.shared.searchContent(query: "kpop") { result in
                         print(result)
                     }
                 } catch {
