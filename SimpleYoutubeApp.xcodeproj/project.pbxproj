@@ -24,6 +24,7 @@
 		3C1A1990261774A7002BC341 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A198F261774A7002BC341 /* APIConstant.swift */; };
 		3C1A1993261778A8002BC341 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A1992261778A8002BC341 /* Configuration.swift */; };
 		3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A199526177B45002BC341 /* NetworkClient.swift */; };
+		3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19972617914D002BC341 /* VideoSearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		3C1A198F261774A7002BC341 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		3C1A1992261778A8002BC341 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3C1A199526177B45002BC341 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		3C1A19972617914D002BC341 /* VideoSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				3C1A197F26175929002BC341 /* VideoSnippet.swift */,
 				3C1A198126175D6B002BC341 /* YoutubeAPIError.swift */,
+				3C1A19972617914D002BC341 /* VideoSearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				3C1A194A2617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld in Sources */,
 				3C1A1993261778A8002BC341 /* Configuration.swift in Sources */,
 				3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */,
+				3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

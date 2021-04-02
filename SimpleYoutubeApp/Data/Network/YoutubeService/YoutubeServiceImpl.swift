@@ -17,9 +17,9 @@ class YoutubeServiceImpl : YoutubeService {
     
     func searchContent(
         query: String,
-        completion: @escaping (Result<VideoSnippet, Error>) -> Void) throws {
+        completion: @escaping (Result<VideoSearchResult, Error>) -> Void) throws {
         let queryItems = [
-            // URLQueryItem(name: "key", value: try Configuration.value(for: "YouTubeApiKey")),
+            URLQueryItem(name: "key", value: try Configuration.value(for: "YouTubeApiKey")),
             URLQueryItem(name: "part", value: "snippet"),
             URLQueryItem(name: "q", value: query)
         ]

@@ -31,6 +31,7 @@ class NetworkClient {
             print(NSString(data: _data, encoding: String.Encoding.utf8.rawValue) ?? "NIL DATA")
             
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             
             do {
                 if (httpResponse.statusCode == 200) {
@@ -41,7 +42,7 @@ class NetworkClient {
                     completion(.failure(decodedError))
                 }
             } catch {
-                completion(.failure(URLError(.cannotDecodeContentData)))
+                completion(.failure(error))
             }
         }.resume()
     }
