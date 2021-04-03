@@ -38,7 +38,11 @@ struct SearchView: View {
                     onRetry: self.retrySearch
                 ).frame(maxHeight: .infinity))
         case .success(let videos):
-            return AnyView(VideoListView(videos: videos))
+            return AnyView(
+                VideoListView(videos: videos) { video in
+                    print(video)
+                }
+            )
         }
     }
     

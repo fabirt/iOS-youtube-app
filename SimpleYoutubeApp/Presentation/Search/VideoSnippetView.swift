@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct VideoSnippetView: View {
     let video: VideoSnippet
+    let onTapGesture: () -> Void
     
     var body: some View {
         // let dateFormatter = DateFormatter()
@@ -34,11 +35,17 @@ struct VideoSnippetView: View {
             }.padding(.horizontal)
                 .padding(.vertical)
         }
+        .contentShape(Rectangle())
+        .onTapGesture {
+            self.onTapGesture()
+        }
     }
 }
 
 struct VideoSnippetView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoSnippetView(video: demoVideoSnippet())
+        VideoSnippetView(video: demoVideoSnippet()) {
+            
+        }
     }
 }

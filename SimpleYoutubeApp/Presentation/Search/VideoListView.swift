@@ -10,12 +10,14 @@ import SwiftUI
 
 struct VideoListView: View {
     let videos: [VideoSnippet]
+    let onVideoTap: (VideoSnippet) -> Void
     
     var body: some View {
         List {
             ForEach(videos, id: \.etag) { (video: VideoSnippet) in
-                VideoSnippetView(video: video)
-                    .listRowInsets(.init())
+                VideoSnippetView(video: video) {
+                    self.onVideoTap(video)
+                }.listRowInsets(.init())
             }
         }
     }
@@ -23,6 +25,6 @@ struct VideoListView: View {
 
 struct VideoListView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoListView(videos: [])
+        VideoListView(videos: []) { _ in }
     }
 }
