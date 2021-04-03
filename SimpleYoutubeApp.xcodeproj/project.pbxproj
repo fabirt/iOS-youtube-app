@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,9 @@
 		3C1A19B92617F891002BC341 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B82617F891002BC341 /* VideoListView.swift */; };
 		3C1A19BC261803FA002BC341 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19BB261803FA002BC341 /* Date.swift */; };
 		3C1A19BE261807CC002BC341 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19BD261807CC002BC341 /* UIApplication.swift */; };
+		3CB0304F2618D18800D2B91D /* YouTubeControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0304E2618D18800D2B91D /* YouTubeControlState.swift */; };
+		3CB030512618D1F700D2B91D /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB030502618D1F700D2B91D /* YouTubeView.swift */; };
+		3CB030542618D4F900D2B91D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB030532618D4F900D2B91D /* VideoPlayerView.swift */; };
 		69D3D12260DD94D32B48077C /* Pods_SimpleYoutubeApp_SimpleYoutubeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FE2BF32EFE79B34BBC8634 /* Pods_SimpleYoutubeApp_SimpleYoutubeAppUITests.framework */; };
 		DB282DF8F2BC12BFE647743D /* Pods_SimpleYoutubeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3070997ABBC7B94876531614 /* Pods_SimpleYoutubeAppTests.framework */; };
 		DD31F3A96DF614CAABE227D8 /* Pods_SimpleYoutubeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15595124006D481A4D87BAA4 /* Pods_SimpleYoutubeApp.framework */; };
@@ -99,6 +102,9 @@
 		3C1A19B82617F891002BC341 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		3C1A19BB261803FA002BC341 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3C1A19BD261807CC002BC341 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		3CB0304E2618D18800D2B91D /* YouTubeControlState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeControlState.swift; sourceTree = "<group>"; };
+		3CB030502618D1F700D2B91D /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
+		3CB030532618D4F900D2B91D /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		9679ACAFC703D109E5CF557F /* Pods-SimpleYoutubeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYoutubeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYoutubeAppTests/Pods-SimpleYoutubeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EF0A0724ECB288ACA797130 /* Pods-SimpleYoutubeApp-SimpleYoutubeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYoutubeApp-SimpleYoutubeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleYoutubeApp-SimpleYoutubeAppUITests/Pods-SimpleYoutubeApp-SimpleYoutubeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB40C51E693D20BC779E250C /* Pods-SimpleYoutubeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYoutubeAppTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleYoutubeAppTests/Pods-SimpleYoutubeAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +213,8 @@
 			children = (
 				3C1A19AF2617EF7E002BC341 /* Common */,
 				3C1A197926175426002BC341 /* Search */,
+				3CB030522618D4CE00D2B91D /* VideoPlayer */,
+				3CB0304D2618D12400D2B91D /* YouTubePlayer */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -330,6 +338,23 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		3CB0304D2618D12400D2B91D /* YouTubePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3CB0304E2618D18800D2B91D /* YouTubeControlState.swift */,
+				3CB030502618D1F700D2B91D /* YouTubeView.swift */,
+			);
+			path = YouTubePlayer;
+			sourceTree = "<group>";
+		};
+		3CB030522618D4CE00D2B91D /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3CB030532618D4F900D2B91D /* VideoPlayerView.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
 		93A533E93C844245428B14E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,7 +375,6 @@
 				9679ACAFC703D109E5CF557F /* Pods-SimpleYoutubeAppTests.debug.xcconfig */,
 				AB40C51E693D20BC779E250C /* Pods-SimpleYoutubeAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -602,6 +626,7 @@
 				3C1A19B72617F488002BC341 /* ErrorView.swift in Sources */,
 				3C1A198B261772EB002BC341 /* YoutubeServiceImpl.swift in Sources */,
 				3C1A19B12617EF9A002BC341 /* CustomActivityIndicator.swift in Sources */,
+				3CB0304F2618D18800D2B91D /* YouTubeControlState.swift in Sources */,
 				3C1A19452617512C002BC341 /* AppDelegate.swift in Sources */,
 				3C1A198D261773FD002BC341 /* YoutubeServiceTestImpl.swift in Sources */,
 				3C1A19472617512C002BC341 /* SceneDelegate.swift in Sources */,
@@ -614,6 +639,8 @@
 				3C1A199E2617A755002BC341 /* YoutubeRepositoryImpl.swift in Sources */,
 				3C1A194A2617512C002BC341 /* SimpleYoutubeApp.xcdatamodeld in Sources */,
 				3C1A1993261778A8002BC341 /* Configuration.swift in Sources */,
+				3CB030512618D1F700D2B91D /* YouTubeView.swift in Sources */,
+				3CB030542618D4F900D2B91D /* VideoPlayerView.swift in Sources */,
 				3C1A199626177B45002BC341 /* NetworkClient.swift in Sources */,
 				3C1A19982617914D002BC341 /* VideoSearchResult.swift in Sources */,
 				3C1A199C2617A5EB002BC341 /* YoutubeRepository.swift in Sources */,

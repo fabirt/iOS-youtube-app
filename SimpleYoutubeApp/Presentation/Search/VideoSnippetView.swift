@@ -18,26 +18,25 @@ struct VideoSnippetView: View {
         // dateFormatter.dateFormat = "MMM dd, yyyy"
         // let date = dateFormatter.string(from: video.snippet.publishedAt)
         
-        return VStack(alignment: .leading, spacing: 0) {
-            WebImage(url: URL(string: video.snippet.thumbnails.medium.url))
-                .resizable()
-                .placeholder(Image("ThumbnailPlaceholder"))
-                .scaledToFill()
-                .aspectRatio(320 / 180, contentMode: .fit)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(video.snippet.title)
-                Text(video.snippet.channelTitle)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                Text(video.snippet.publishedAt.timeAgo())
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }.padding(.horizontal)
-                .padding(.vertical)
-        }
-        .contentShape(Rectangle())
-        .onTapGesture {
-            self.onTapGesture()
+        NavigationLink(destination: VideoPlayerView(video: video)) {
+            VStack(alignment: .leading, spacing: 0) {
+                WebImage(url: URL(string: video.snippet.thumbnails.medium.url))
+                    .resizable()
+                    .placeholder(Image("ThumbnailPlaceholder"))
+                    .scaledToFill()
+                    .aspectRatio(320 / 180, contentMode: .fit)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(video.snippet.title)
+                    Text(video.snippet.channelTitle)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Text(video.snippet.publishedAt.timeAgo())
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }.padding(.horizontal)
+                    .padding(.vertical)
+            }
+            .contentShape(Rectangle())
         }
     }
 }

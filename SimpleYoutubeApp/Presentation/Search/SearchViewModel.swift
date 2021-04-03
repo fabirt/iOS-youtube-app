@@ -15,6 +15,10 @@ class SearchViewModel: ObservableObject {
     private let repository: YoutubeRepository = YoutubeRepositoryImpl(service: YoutubeServiceTestImpl.shared)
     private var nextPageToken: String? = nil
     
+    init() {
+        initializeContent()
+    }
+    
     func searchContent() {
         searchContent(query: searchText.trimmingCharacters(in: .whitespacesAndNewlines))
     }

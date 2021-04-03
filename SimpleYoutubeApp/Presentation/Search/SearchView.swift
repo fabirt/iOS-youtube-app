@@ -12,20 +12,21 @@ struct SearchView: View {
     @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
-        VStack {
-            TextField(
-                "Search",
-                text: $viewModel.searchText,
-                onCommit: self.viewModel.searchContent
-            ).keyboardType(.webSearch)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .disableAutocorrection(true)
-                .padding()
-            
-            renderContent()
-        }.onAppear {
-            self.viewModel.initializeContent()
-        }.environmentObject(viewModel)
+        NavigationView {
+            VStack {
+                TextField(
+                    "Search",
+                    text: $viewModel.searchText,
+                    onCommit: self.viewModel.searchContent
+                ).keyboardType(.webSearch)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .disableAutocorrection(true)
+                    .padding()
+                
+                renderContent()
+            }.navigationBarTitle("YouTube")
+                .environmentObject(viewModel)
+        }
     }
     
     func renderContent() -> AnyView {
