@@ -30,16 +30,13 @@ struct SearchView: View {
     func renderContent() -> AnyView {
         switch self.viewModel.state {
         case .loading:
-            return AnyView(Text("Loading").frame(maxHeight: .infinity))
+            return AnyView(LoadingView().frame(maxHeight: .infinity))
         case .error(let error):
-            return AnyView(Text(error.localizedDescription).frame(maxHeight: .infinity))
+            return AnyView(ErrorView(error: error, onRetry: {
+                self.viewModel.searchContent()
+            }) .frame(maxHeight: .infinity))
         case .success(let videos):
-            return AnyView(List {
-                ForEach(videos, id: \.etag) { (video: VideoSnippet) in
-                    VideoSnippetView(video: video)
-                        .listRowInsets(.init())
-                }
-            })
+            return AnyView(VideoListView(videos: videos))
         }
     }
 }
