@@ -32,11 +32,21 @@ struct SearchView: View {
         case .loading:
             return AnyView(LoadingView().frame(maxHeight: .infinity))
         case .error(let error):
-            return AnyView(ErrorView(error: error, onRetry: {
-                self.viewModel.searchContent()
-            }) .frame(maxHeight: .infinity))
+            return AnyView(
+                ErrorView(
+                    error: error,
+                    onRetry: self.retrySearch
+                ).frame(maxHeight: .infinity))
         case .success(let videos):
             return AnyView(VideoListView(videos: videos))
+        }
+    }
+    
+    func retrySearch() {
+        if (viewModel.searchText.isEmpty) {
+            viewModel.initializeContent()
+        } else {
+            viewModel.searchContent()
         }
     }
 }

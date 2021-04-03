@@ -13,7 +13,11 @@ struct VideoSnippetView: View {
     let video: VideoSnippet
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        // let dateFormatter = DateFormatter()
+        // dateFormatter.dateFormat = "MMM dd, yyyy"
+        // let date = dateFormatter.string(from: video.snippet.publishedAt)
+        
+        return VStack(alignment: .leading, spacing: 0) {
             WebImage(url: URL(string: video.snippet.thumbnails.medium.url))
                 .resizable()
                 .placeholder(Image("ThumbnailPlaceholder"))
@@ -24,7 +28,7 @@ struct VideoSnippetView: View {
                 Text(video.snippet.channelTitle)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
-                Text(video.snippet.publishedAt.description)
+                Text(video.snippet.publishedAt.timeAgo())
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }.padding(.horizontal)

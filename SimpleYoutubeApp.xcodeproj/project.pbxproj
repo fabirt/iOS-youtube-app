@@ -35,6 +35,7 @@
 		3C1A19B52617F3F9002BC341 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B42617F3F9002BC341 /* LoadingView.swift */; };
 		3C1A19B72617F488002BC341 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B62617F488002BC341 /* ErrorView.swift */; };
 		3C1A19B92617F891002BC341 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B82617F891002BC341 /* VideoListView.swift */; };
+		3C1A19BC261803FA002BC341 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19BB261803FA002BC341 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		3C1A19B42617F3F9002BC341 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3C1A19B62617F488002BC341 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		3C1A19B82617F891002BC341 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
+		3C1A19BB261803FA002BC341 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		3C1A19432617512C002BC341 /* SimpleYoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C1A19BA261803E2002BC341 /* Util */,
 				3C1A199126177890002BC341 /* Application */,
 				3C1A19852617712B002BC341 /* Data */,
 				3C1A197D261758FD002BC341 /* Domain */,
@@ -301,6 +304,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		3C1A19BA261803E2002BC341 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A19BB261803FA002BC341 /* Date.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1A19BC261803FA002BC341 /* Date.swift in Sources */,
 				3C1A197B26175455002BC341 /* SearchView.swift in Sources */,
 				3C1A198226175D6B002BC341 /* YoutubeAPIError.swift in Sources */,
 				3C1A19A32617AF85002BC341 /* SearchViewModel.swift in Sources */,
