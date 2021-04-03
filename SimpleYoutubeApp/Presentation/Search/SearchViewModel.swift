@@ -14,10 +14,7 @@ class SearchViewModel: ObservableObject {
     @Published var state: SearchViewState = .loading
     
     func searchContent() {
-        if (searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) {
-            return
-        }
-        searchContent(query: searchText)
+        searchContent(query: searchText.trimmingCharacters(in: .whitespacesAndNewlines))
     }
     
     func initializeContent() {
@@ -27,13 +24,14 @@ class SearchViewModel: ObservableObject {
     private func searchContent(query: String) {
         state = .loading
         repository.searchContent(query: query) { result in
-            print(result)
-            switch result {
-            case .success(let searchResult):
-                self.state = .success(searchResult.items)
-                
-            case .failure(let error):
-                self.state = .error(error)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let searchResult):
+                    self.state = .success(searchResult.items)
+                    
+                case .failure(let error):
+                    self.state = .error(error)
+                }
             }
         }
     }
