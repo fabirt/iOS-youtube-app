@@ -12,7 +12,7 @@ class SearchViewModel: ObservableObject {
     @Published var state: SearchViewState = .loading
     @Published var isLoadingPage: Bool = false
     var searchText: String = ""
-    private let repository: YoutubeRepository = YoutubeRepositoryImpl(service: YoutubeServiceTestImpl.shared)
+    private let repository: YoutubeRepository = YoutubeRepositoryImpl(service: YoutubeServiceImpl.shared)
     private var nextPageToken: String? = nil
     
     init() {

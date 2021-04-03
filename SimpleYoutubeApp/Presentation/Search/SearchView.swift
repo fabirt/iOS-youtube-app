@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel = SearchViewModel()
+    @EnvironmentObject var playerState: YouTubeControlState
     
     var body: some View {
         NavigationView {
@@ -23,13 +24,13 @@ struct SearchView: View {
                     .disableAutocorrection(true)
                     .padding()
                 
-                renderContent()
-            }.navigationBarTitle("YouTube")
+                buildContent()
+            }.navigationBarTitle("Simple YT")
                 .environmentObject(viewModel)
         }
     }
     
-    func renderContent() -> AnyView {
+    private func buildContent() -> AnyView {
         switch self.viewModel.state {
         case .loading:
             return AnyView(LoadingView().frame(maxHeight: .infinity))
@@ -42,7 +43,8 @@ struct SearchView: View {
         case .success(let videos):
             return AnyView(
                 VideoListView(videos: videos) { video in
-                    print(video)
+                    self.playerState.videoID = video.id.videoID
+                    self.playerState.playVideo()
                 }
             )
         }

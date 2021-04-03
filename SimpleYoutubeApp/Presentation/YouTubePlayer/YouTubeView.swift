@@ -42,10 +42,13 @@ struct YouTubeView: UIViewRepresentable {
         
         return ytVideo
     }
-      
+    
     func updateUIView(_ uiView: UIViewType, context: Context) {
         
         guard let videoID = playerState.videoID else { return }
+        print("update YouTubeView")
+        print(playerState.executeCommand)
+        print(uiView.ready)
 
         if !(playerState.executeCommand == .idle) && uiView.ready {
 
@@ -88,10 +91,12 @@ struct YouTubeView: UIViewRepresentable {
         @ObservedObject var playerState: YouTubeControlState
         
         init(playerState: YouTubeControlState) {
+            print("Coordinator init")
             self.playerState = playerState
         }
         
-        func playerReady(_ videoPlayer: YouTubePlayerView) {
+        func playerReady(videoPlayer: YouTubePlayerView) {
+            print("playerReady")
             videoPlayer.play()
             playerState.videoState = .play
         }
