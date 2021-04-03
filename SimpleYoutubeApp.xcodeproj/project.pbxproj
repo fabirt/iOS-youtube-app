@@ -36,6 +36,7 @@
 		3C1A19B72617F488002BC341 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B62617F488002BC341 /* ErrorView.swift */; };
 		3C1A19B92617F891002BC341 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19B82617F891002BC341 /* VideoListView.swift */; };
 		3C1A19BC261803FA002BC341 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19BB261803FA002BC341 /* Date.swift */; };
+		3C1A19BE261807CC002BC341 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A19BD261807CC002BC341 /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		3C1A19B62617F488002BC341 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		3C1A19B82617F891002BC341 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		3C1A19BB261803FA002BC341 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		3C1A19BD261807CC002BC341 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				3C1A19BB261803FA002BC341 /* Date.swift */,
+				3C1A19BD261807CC002BC341 /* UIApplication.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1A19BE261807CC002BC341 /* UIApplication.swift in Sources */,
 				3C1A19BC261803FA002BC341 /* Date.swift in Sources */,
 				3C1A197B26175455002BC341 /* SearchView.swift in Sources */,
 				3C1A198226175D6B002BC341 /* YoutubeAPIError.swift in Sources */,
