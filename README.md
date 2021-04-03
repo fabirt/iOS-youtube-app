@@ -1,6 +1,6 @@
 # SwiftUI - YouTube video player
 
-Simple iOS Youtube video player App using [Youtube API](https://developers.google.com/youtube/v3) and SwiftUI.
+Simple iOS YouTube video player app using [YouTube Data API](https://developers.google.com/youtube/v3) and SwiftUI.
 
 YouTubePlayerView provided by [Swift-YouTube-Player](https://github.com/gilesvangruisen/Swift-YouTube-Player).
 
