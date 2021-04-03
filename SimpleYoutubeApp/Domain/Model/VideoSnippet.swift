@@ -18,14 +18,12 @@ struct VideoSnippet: Codable {
 // MARK: - VideoID
 struct VideoID: Codable {
     let kind: String
-    let videoID: String?
-    let playlistID: String?
+    let videoID: String
     
     // Specify coding/decoding keys
     enum CodingKeys: String, CodingKey {
         case kind
         case videoID = "videoId"
-        case playlistID = "playlistId"
     }
 }
 

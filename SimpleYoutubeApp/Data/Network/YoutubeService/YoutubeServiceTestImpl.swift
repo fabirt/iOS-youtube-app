@@ -15,6 +15,7 @@ class YoutubeServiceTestImpl: YoutubeService {
     
     func searchContent(
         query: String,
+        pageToken: String?,
         completion: @escaping (Result<VideoSearchResult, Error>) -> Void
     ) throws {
         let items = [
@@ -24,6 +25,7 @@ class YoutubeServiceTestImpl: YoutubeService {
             kind: "youtube#searchListResponse",
             etag: "f7p4L4ZmLBZx8MgoogLuHUYNs2w",
             regionCode: "CO",
+            nextPageToken: nil,
             items: items
         )
         
@@ -38,7 +40,7 @@ func demoVideoSnippet() -> VideoSnippet {
     return VideoSnippet(
         kind: "youtube#searchResult",
         etag: "D3Bc931p36RzWqx4SW8SPOxuCWc",
-        id: VideoID(kind: "youtube#video", videoID: "TVUNi0zi1yw", playlistID: nil),
+        id: VideoID(kind: "youtube#video", videoID: "TVUNi0zi1yw"),
         snippet: Snippet(
             publishedAt: dateFormatter.date(from: "2020-12-12T05:53:55Z")!,
             channelID: "UCmFIRWTzoCvM7l0aw5S_4Ww",

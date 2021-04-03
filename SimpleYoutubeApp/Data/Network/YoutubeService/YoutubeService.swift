@@ -12,6 +12,7 @@ protocol YoutubeService {
     
     func searchContent(
         query: String,
+        pageToken: String?,
         completion: @escaping (Result<VideoSearchResult, Error>) -> Void
     ) throws
 }

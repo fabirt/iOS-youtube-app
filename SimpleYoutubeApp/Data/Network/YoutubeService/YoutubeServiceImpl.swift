@@ -17,10 +17,13 @@ class YoutubeServiceImpl: YoutubeService {
     
     func searchContent(
         query: String,
+        pageToken: String?,
         completion: @escaping (Result<VideoSearchResult, Error>) -> Void) throws {
         let queryItems = [
             URLQueryItem(name: "key", value: try Configuration.value(for: "YouTubeApiKey")),
             URLQueryItem(name: "part", value: "snippet"),
+            URLQueryItem(name: "type", value: "video"),
+            URLQueryItem(name: "pageToken", value: pageToken),
             URLQueryItem(name: "q", value: query)
         ]
         var urlComponents = URLComponents(string: API.searchContent)!

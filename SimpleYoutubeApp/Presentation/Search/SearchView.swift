@@ -19,12 +19,13 @@ struct SearchView: View {
                 onCommit: self.viewModel.searchContent
             ).keyboardType(.webSearch)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .disableAutocorrection(true)
                 .padding()
             
             renderContent()
         }.onAppear {
             self.viewModel.initializeContent()
-        }
+        }.environmentObject(viewModel)
     }
     
     func renderContent() -> AnyView {

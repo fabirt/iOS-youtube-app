@@ -10,5 +10,6 @@ import Foundation
 
 struct VideoSearchResult: Codable {
     let kind, etag, regionCode: String
+    let nextPageToken: String?
     let items: [VideoSnippet]
 }

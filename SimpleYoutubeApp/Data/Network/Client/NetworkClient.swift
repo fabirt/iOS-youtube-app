@@ -28,7 +28,7 @@ class NetworkClient {
                 return
             }
             
-            print(NSString(data: _data, encoding: String.Encoding.utf8.rawValue) ?? "NIL DATA")
+            // print(NSString(data: _data, encoding: String.Encoding.utf8.rawValue) ?? "NIL DATA")
             
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601

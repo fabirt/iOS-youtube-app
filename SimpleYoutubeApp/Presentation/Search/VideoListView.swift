@@ -11,6 +11,7 @@ import SwiftUI
 struct VideoListView: View {
     let videos: [VideoSnippet]
     let onVideoTap: (VideoSnippet) -> Void
+    @EnvironmentObject var viewModel: SearchViewModel
     
     var body: some View {
         List {
@@ -18,6 +19,9 @@ struct VideoListView: View {
                 VideoSnippetView(video: video) {
                     self.onVideoTap(video)
                 }.listRowInsets(.init())
+                    .onAppear {
+                        self.viewModel.loadMoreContentIfNeeded(currentItem: video)
+                }
             }
         }
     }
@@ -26,5 +30,6 @@ struct VideoListView: View {
 struct VideoListView_Previews: PreviewProvider {
     static var previews: some View {
         VideoListView(videos: []) { _ in }
+            .environmentObject(SearchViewModel())
     }
 }

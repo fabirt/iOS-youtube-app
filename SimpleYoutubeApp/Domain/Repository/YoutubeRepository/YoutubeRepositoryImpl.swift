@@ -12,9 +12,13 @@ struct YoutubeRepositoryImpl: YoutubeRepository {
     
     let service: YoutubeService
     
-    func searchContent(query: String, completion: @escaping (Result<VideoSearchResult, Error>) -> Void) {
+    func searchContent(
+        query: String,
+        pageToken: String?,
+        completion: @escaping (Result<VideoSearchResult, Error>) -> Void
+    ) {
         do {
-            try service.searchContent(query: query) { result in
+            try service.searchContent(query: query, pageToken: pageToken) { result in
                 completion(result)
             }
         } catch {
