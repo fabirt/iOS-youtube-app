@@ -21,13 +21,25 @@ struct SearchView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            List {
-                ForEach(viewModel.items, id: \.etag) { (video: VideoSnippet) in
+            renderContent()
+        }.onAppear {
+            self.viewModel.initializeContent()
+        }
+    }
+    
+    func renderContent() -> AnyView {
+        switch self.viewModel.state {
+        case .loading:
+            return AnyView(Text("Loading").frame(maxHeight: .infinity))
+        case .error(let error):
+            return AnyView(Text(error.localizedDescription).frame(maxHeight: .infinity))
+        case .success(let videos):
+            return AnyView(List {
+                ForEach(videos, id: \.etag) { (video: VideoSnippet) in
                     VideoSnippetView(video: video)
                         .listRowInsets(.init())
                 }
-                
-            }
+            })
         }
     }
 }

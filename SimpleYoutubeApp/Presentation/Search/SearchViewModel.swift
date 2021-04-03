@@ -11,22 +11,36 @@ import Foundation
 class SearchViewModel: ObservableObject {
     var searchText: String = ""
     private let repository: YoutubeRepository = YoutubeRepositoryImpl(service: YoutubeServiceTestImpl.shared)
-    @Published var items: [VideoSnippet] = []
+    @Published var state: SearchViewState = .loading
     
     func searchContent() {
         if (searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) {
             return
         }
-        repository.searchContent(query: searchText) { result in
+        searchContent(query: searchText)
+    }
+    
+    func initializeContent() {
+        searchContent(query: "")
+    }
+    
+    private func searchContent(query: String) {
+        state = .loading
+        repository.searchContent(query: query) { result in
             print(result)
             switch result {
             case .success(let searchResult):
-                self.items = searchResult.items
-                break
+                self.state = .success(searchResult.items)
                 
-            case .failure(_):
-                break
+            case .failure(let error):
+                self.state = .error(error)
             }
         }
     }
+}
+
+enum SearchViewState {
+    case loading
+    case error(Error)
+    case success([VideoSnippet])
 }

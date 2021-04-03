@@ -26,7 +26,10 @@ class YoutubeServiceTestImpl: YoutubeService {
             regionCode: "CO",
             items: items
         )
-        completion(.success(result))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            completion(.success(result))
+        }
     }
 }
 
