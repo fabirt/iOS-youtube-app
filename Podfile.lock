@@ -1,0 +1,26 @@
+PODS:
+  - SDWebImage (5.11.0):
+    - SDWebImage/Core (= 5.11.0)
+  - SDWebImage/Core (5.11.0)
+  - SDWebImageSwiftUI (1.5.0):
+    - SDWebImage (~> 5.7)
+  - YouTubePlayer (0.7.2)
+
+DEPENDENCIES:
+  - SDWebImageSwiftUI (~> 1.5.0)
+  - YouTubePlayer
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - YouTubePlayer
+
+SPEC CHECKSUMS:
+  SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
+  SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
+
+PODFILE CHECKSUM: f72f4f0a73eda2bdbfd82e1be742f1b9ae1857ab
+
+COCOAPODS: 1.9.1
